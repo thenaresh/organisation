@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title> Login | High Court of Sikkim </title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+{% load widget_tweaks %}
+
+<div class="container">
+
+    <div class="row justify-content-center" style="height:400px; padding-top:140px;">
+
+        <div class="col-4 card " style="padding:0px;">
+            <div class="card-header text-center bg-primary text-light">
+                <b> Login - High Court of Sikkim </b>
+            </div>
+            <div class="card-body">
+                <form method="post" action="" class="align-middle">
+                    {% csrf_token %}
+                    <label class="text-dark">Enter your username :</label>
+                    <br/>
+                    {% render_field form.username class+="form-control" %}
+
+                    <br/>
+
+                    <label class="text-dark">Enter your password :</label>
+                    <br/>
+                    {% render_field form.password class+="form-control" %}
+
+                    <br/>
+                    <hr/>
+                    <div class="row justify-content-md-end">
+                        <div class="col col-lg-3">
+                            <input type="submit" value="Login" class="btn btn-primary"/>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
